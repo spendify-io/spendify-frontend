@@ -2,7 +2,7 @@
   scroll-behavior: smooth;
 }
 
-/** Show custom scrollbar on screen **/
+/***** Show custom scrollbar on screen *****/
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -102,5 +102,28 @@
   --primary-900: var(--blue-900);
 }
 
-/*  100 vh fix for mobile */
-/* Breakpoints and breakpoint mixins *//*# sourceMappingURL=index.css.map */
+/*****  100 vh fix for mobile *****/
+/***** Breakpoints and breakpoint mixins *****/
+/***** Navbar Brand Logo *****/
+.navbar-brand {
+  -webkit-animation: brandAnimation 2s linear infinite alternate both;
+          animation: brandAnimation 2s linear infinite alternate both;
+}
+
+@-webkit-keyframes brandAnimation {
+  0% {
+    color: var(--red-500);
+  }
+  100% {
+    color: var(--blue-500);
+  }
+}
+
+@keyframes brandAnimation {
+  0% {
+    color: var(--red-500);
+  }
+  100% {
+    color: var(--blue-500);
+  }
+}/*# sourceMappingURL=index.css.map */
