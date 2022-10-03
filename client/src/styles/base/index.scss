@@ -5,8 +5,8 @@
 /***** Show custom scrollbar on screen *****/
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   display: unset;
 }
 
@@ -157,9 +157,9 @@ $bp-lg: 1200px;
 }
 @keyframes brandAnimation {
   0% {
-    color: var(--red-500);
+    color: var(--blue-300);
   }
   100% {
-    color: var(--blue-500);
+    color: var(--blue-800);
   }
 }

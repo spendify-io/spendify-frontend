@@ -20,9 +20,13 @@
   "homepage": "https://github.com/ayushsoni1010/spendify#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.19"
   }

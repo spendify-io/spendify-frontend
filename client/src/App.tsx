@@ -4,14 +4,16 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import './styles/index.css';
 
 /***** Component Imports *****/
-import Navbar from './components/Navbar';
-import Login from './components/Login';
+import Header from './components/Header';
+import Login from './pages/Login';
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <BrowserRouter>
-      <Navbar />
-      <Login />
+      <Header />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </BrowserRouter>
   </ChakraProvider>
 );
