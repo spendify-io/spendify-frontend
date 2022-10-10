@@ -1,7 +1,7 @@
-import { configureStore } from 'redux';
+import { configureStore, createStore } from 'redux';
 
 const reducerFunc = (state = { counter: 0 }, action) => {};
 
-const store = configureStore(reducerFunc);
+const store = createStore(reducerFunc);
 
 export default store;

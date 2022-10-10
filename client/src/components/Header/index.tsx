@@ -5,52 +5,57 @@ import {
   Box,
   Flex,
   Link,
-  Text,
   Stack,
   Button,
-  useColorModeValue,
-  useColorMode,
-  Image,
+  Text,
   ButtonGroup,
 } from '@chakra-ui/react';
 
 import logo from '../../assets/svgs/spendify-logo.svg';
+import Logo from '../Logo';
 
 const Header: React.FunctionComponent = () => {
-  const colorModeText = useColorModeValue('light', 'dark');
-
   return (
     <React.Fragment>
       <Box position="fixed" top="0" zIndex="10" minW="100%">
         <Flex
-          backdropFilter={'blur(4px)'}
-          border={'none'}
+          backdropFilter="blur(4px)"
+          border="none"
           minH="60px"
           py={{ base: 2, md: 3 }}
           px={{ base: 4, md: 7 }}
-          alignSelf={'center'}
+          alignSelf="center"
         >
-          <Stack
-            flex={{ base: 1, md: 1 }}
-            justify={'start'}
-            direction={'row'}
-            align={'center'}
+          <Link
+            as={NavLink}
+            to="/"
+            textDecoration="none"
+            style={{ textDecoration: 'none' }}
           >
-            <Link
-              as={NavLink}
-              to="/"
-              textDecoration="none"
-              style={{ textDecoration: 'none' }}
+            <Stack
+              flex={{ base: 1, md: 1 }}
+              justify="start"
+              direction="row"
+              align="center"
+              spacing="2"
+              cursor="pointer"
             >
-              <Image src={logo} w={'28'} alt="logo" />
-            </Link>
-          </Stack>
+              <Logo />
+              <Text
+                fontFamily={'heading'}
+                fontSize="2xl"
+                fontWeight="extrabold"
+              >
+                Spendify
+              </Text>
+            </Stack>
+          </Link>
           <Stack
             flex={{ base: 1, md: 1 }}
-            justify={'end'}
-            direction={'row'}
-            align={'center'}
-            spacing={3}
+            justify="end"
+            direction="row"
+            align="center"
+            spacing="3"
             mx={{
               base: 0,
             }}
@@ -63,28 +68,22 @@ const Header: React.FunctionComponent = () => {
               <Button
                 as={NavLink}
                 to="/login"
-                border={'2px'}
-                borderColor={'blue.500'}
-                variant={'outline'}
-                size={'md'}
+                border="2px"
+                variant="outline"
+                size="md"
                 colorScheme="blue"
               >
-                Log In
+                Log in
               </Button>
               <Button
-                bgColor={'blue.500'}
+                // bgColor="blue.500"
+                colorScheme="blue"
                 as={NavLink}
                 to="/signup"
-                variant={'ghost'}
-                size={'md'}
-                _hover={
-                  colorModeText === 'light'
-                    ? { bgColor: 'blue.600' }
-                    : { bgColor: 'blue.400' }
-                }
-                color={colorModeText === 'light' ? 'white' : 'black'}
+                variant="solid"
+                size="md"
               >
-                Sign Up
+                Sign up
               </Button>
             </ButtonGroup>
           </Stack>

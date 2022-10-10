@@ -73,7 +73,7 @@ const Login: React.FunctionComponent = () => {
               <FormControl isRequired={isError} isInvalid={isError}>
                 <FormLabel htmlFor="Email">Email</FormLabel>
                 <Input
-                  type={'email'}
+                  type="email"
                   name="email"
                   id="email"
                   variant="filled"
@@ -92,7 +92,7 @@ const Login: React.FunctionComponent = () => {
               <FormControl isRequired={isError} isInvalid={isError}>
                 <FormLabel>Password</FormLabel>
                 <Input
-                  type={'password'}
+                  type="password"
                   name="password"
                   id="password"
                   variant="filled"
@@ -109,10 +109,10 @@ const Login: React.FunctionComponent = () => {
 
               {/* Login Button */}
               <Button
-                w={'full'}
-                type={'submit'}
-                colorScheme="black"
-                bgColor={'blue.500'}
+                w="full"
+                type="submit"
+                variant="solid"
+                colorScheme="blue"
                 _hover={
                   localStorage.getItem('isDarkMode')
                     ? { bgColor: 'blue.600' }

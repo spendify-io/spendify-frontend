@@ -113,6 +113,7 @@ const SignUp = () => {
                   value={firstName}
                   onChange={handleChangeFirstName}
                   placeholder="Enter your first name"
+                  _focus={{ boxShadow: 'outline' }}
                 />
                 {isError ? (
                   <FormErrorMessage>{errorFirstName}</FormErrorMessage>
@@ -132,6 +133,7 @@ const SignUp = () => {
                   value={lastName}
                   onChange={handleChangeLastName}
                   placeholder="Enter your last name"
+                  _focus={{ boxShadow: 'outline' }}
                 />
                 {isError ? (
                   <FormErrorMessage>{errorLastName}</FormErrorMessage>
@@ -151,6 +153,7 @@ const SignUp = () => {
                   value={email}
                   onChange={handleChangeEmail}
                   placeholder="Enter your email address"
+                  _focus={{ boxShadow: 'outline' }}
                 />
                 {isError ? (
                   <FormErrorMessage>{errorEmailMessage}</FormErrorMessage>
@@ -170,6 +173,7 @@ const SignUp = () => {
                   value={password}
                   onChange={handleChangePassword}
                   placeholder="Enter your password"
+                  _focus={{ boxShadow: 'outline' }}
                 />
                 {isError ? (
                   <FormErrorMessage>{errorPasswordMessage}</FormErrorMessage>
@@ -178,21 +182,17 @@ const SignUp = () => {
                 )}
               </FormControl>
 
-              {/* Login Button */}
+              {/* Sign up Button */}
               <Button
-                w={'full'}
-                type={'submit'}
-                color="white"
-                bgColor={'blue.500'}
-                _hover={
-                  localStorage.getItem('isDarkMode')
-                    ? { bgColor: 'blue.600' }
-                    : { bgColor: 'blue.400' }
-                }
-                _focus={{ transform: 'scale(1.02)' }}
+                w="full"
+                type="submit"
+                variant="solid"
+                size="md"
+                colorScheme="blue"
+                _focus={{ transform: 'scale(1.02)', boxShadow: 'outline' }}
               >
                 {loading ? (
-                  <CircularProgress isIndeterminate size="24px" color="white" />
+                  <CircularProgress isIndeterminate size="24px" color="red" />
                 ) : (
                   'Sign Up'
                 )}

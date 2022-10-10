@@ -4,7 +4,7 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import './styles/index.css';
 
 /***** Component Imports *****/
-import Header from './components/Header';
+import Header from './website/Header';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 

@@ -28,6 +28,7 @@ export const ColorModeSwitcher: React.FunctionComponent<
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       aria-label={`Switch to ${text} mode`}
+      _focus={{ boxShadow: 'outline' }}
       {...props}
     />
   );
