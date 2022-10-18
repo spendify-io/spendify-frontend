@@ -78,6 +78,7 @@ const Login: React.FunctionComponent = () => {
                   id="email"
                   variant="filled"
                   value={email}
+                  _focus={{ boxShadow: 'outline' }}
                   onChange={handleChangeEmail}
                   placeholder="Your email address"
                 />
@@ -98,6 +99,7 @@ const Login: React.FunctionComponent = () => {
                   variant="filled"
                   value={password}
                   onChange={handleChangePassword}
+                  _focus={{ boxShadow: 'outline' }}
                   placeholder="Your password"
                 />
                 {isError ? (
@@ -113,13 +115,9 @@ const Login: React.FunctionComponent = () => {
                 type="submit"
                 variant="solid"
                 colorScheme="blue"
-                _hover={
-                  localStorage.getItem('isDarkMode')
-                    ? { bgColor: 'blue.600' }
-                    : { bgColor: 'blue.400' }
-                }
                 _focus={{
                   transform: 'scale(1.02)',
+                  boxShadow: 'outline',
                 }}
               >
                 Log In
