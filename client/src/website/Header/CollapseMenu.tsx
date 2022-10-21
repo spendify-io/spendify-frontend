@@ -19,7 +19,6 @@ const CollapseMenu: React.FunctionComponent<SidebarProps> = ({
   isOpen,
   setOpen,
 }) => {
-  console.log(isOpen);
   return (
     <React.Fragment>
       <Collapse in={isOpen}>
