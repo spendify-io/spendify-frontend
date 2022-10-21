@@ -7,12 +7,14 @@ import './styles/index.css';
 import Header from './website/Header';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Hero from './website/Hero';
 
 export const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Header />
+        <Hero />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
